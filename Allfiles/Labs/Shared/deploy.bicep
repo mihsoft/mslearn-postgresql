@@ -30,8 +30,8 @@ resource postgreSQLFlexibleServer 'Microsoft.DBforPostgreSQL/flexibleServers@202
   name: serverName
   location: location
   sku: {
-    name: 'Standard_D2ds_v4'
-    tier: 'GeneralPurpose'
+    name: 'Standard_B1ms'
+    tier: 'Burstable'
   }
   properties: {
     administratorLogin: adminLogin
@@ -52,7 +52,7 @@ resource postgreSQLFlexibleServer 'Microsoft.DBforPostgreSQL/flexibleServers@202
     storage: {
       autoGrow: 'Disabled'
       storageSizeGB: 32
-      tier: 'P10'
+      tier: 'P4'
     }
     version: postgresVersion
   }
